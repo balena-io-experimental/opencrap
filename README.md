@@ -1,5 +1,5 @@
 <picture>
-  <img alt="OpenCRAP Logo" src="https://github.com/balena-io-experimental/opencrap/main/craptor.png">
+  <img alt="OpenCRAP Logo" src="https://github.com/balena-io-experimental/opencrap/blob/main/craptor.png">
 </picture>
 
 # OpenCRAP
