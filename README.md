@@ -1,8 +1,6 @@
-<div align="center">
-  <img width="400" height="auto" src="https://raw.githubusercontent.com/balena-io-experimental/opencrap/main/craptor.png">
-  <br>
-  <br>
-</div>
+<picture>
+  <img alt="OpenCRAP Logo" src="https://github.com/balena-io-experimental/opencrap/main/craptor.png">
+</picture>
 
 # OpenCRAP
 ## Open Cybersecurity Risk Assessment Program
