@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/balena-io-experimental/opencrap/blob/main/schemas/risk.schema.json",
+  "title": "risk schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "info": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "risk version"
+        },
+        "name": {
+          "type": "string",
+          "description": "name the risk"
+        },
+        "description": {
+          "type": "string"
+        },
+        "threat-category": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "interception",
+              "manipulation",
+              "denial of service",
+              "repudiation_send",
+              "repudiation_receive"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "ciaaaps": {
+          "type": "array",
+          "description": "which security objectives are impacted",
+          "items": {
+            "type": "string",
+            "enum": [
+              "confidentiality",
+              "integrity",
+              "availability",
+              "authenticity",
+              "accountability",
+              "privacy",
+              "safety"
+            ]
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "version",
+        "name",
+        "description",
+        "threat-category",
+        "ciaaaps"
+      ]
+    },
+    "initial-assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "impact": {
+          "type": "string"
+        },
+        "likelihood": {
+          "type": "string"
+        },
+        "risk-score": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "impact",
+        "likelihood",
+        "risk-score"
+      ]
+    },
+    "treatment": {
+      "type": "string"
+    },
+    "residual-assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "impact": {
+          "type": "string"
+        },
+        "likelihood": {
+          "type": "string"
+        },
+        "risk-score": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "impact",
+        "likelihood",
+        "risk-score"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "description": "technologies or data domains that imply inherent risk",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ethernet",
+          "wifi",
+          "usb",
+          "storage",
+          "gdpr pii processed"
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "id",
+    "info",
+    "initial-assessment",
+    "treatment",
+    "residual-assessment",
+    "tags"
+  ]
+}

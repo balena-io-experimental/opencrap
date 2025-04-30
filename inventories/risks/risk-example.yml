@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../schemas/risk.schema.json
+
+id: "risk-example"
+info:
+  version: "1.0"
+  name: "Unsecured Wi-Fi Risk"
+  description: "Use of unsecured Wi-Fi allows data interception and potential tampering."
+  threat-category:
+    - "interception"
+    - "manipulation"
+  ciaaaps:
+    - "confidentiality"
+    - "integrity"
+
+initial-assessment:
+  impact: "high"
+  likelihood: "likely"
+  risk-score: 8
+
+treatment: "Enable WPA3 encryption and implement secure authentication for all devices."
+
+residual-assessment:
+  impact: "medium"
+  likelihood: "low"
+  risk-score: 3
+
+tags:
+  - "wifi"
+  - "gdpr pii processed"
